@@ -1,7 +1,8 @@
 Add-Type -Path @(
     "$PSScriptRoot\ApplicationEvent.cs",
     "$PSScriptRoot\ItemEvent.cs",
-    "$PSScriptRoot\MailItemEvent.cs"
+    "$PSScriptRoot\MailItemEvent.cs",
+    "$PSScriptRoot\ApplicationEvent.cs"
 ) -ReferencedAssemblies @(
     'System',
     'System.Runtime',
