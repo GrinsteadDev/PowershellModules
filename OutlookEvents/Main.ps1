@@ -1,5 +1,6 @@
 Add-Type -Path @(
     "$PSScriptRoot\ApplicationEvent.cs",
+    "$PSScriptRoot\ItemEvent.cs",
     "$PSScriptRoot\MailItemEvent.cs"
 ) -ReferencedAssemblies @(
     'System',
@@ -31,7 +32,7 @@ function New-OutlookMailItemEvent
     return [PowershellExtensions.OutlookEvents.MailItemEvent]::new($mailItem);
 }
 
-<#
+#<#
 $oApp = [System.Runtime.InteropServices.Marshal]::GetActiveObject('Outlook.Application')
 $mItem = $oApp.CreateItem([Microsoft.Office.Interop.Outlook.OlItemType]::olMailItem)
 $sendEvent = {
