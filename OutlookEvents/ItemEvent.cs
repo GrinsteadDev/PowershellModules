@@ -133,7 +133,7 @@ namespace PowershellExtensions.OutlookEvents
     public abstract class ItemEvent<T>
     {
         private object _item;
-        public virtual T Item { 
+        public virtual T Item {
             get {
                 return (T)this._item;
             }
